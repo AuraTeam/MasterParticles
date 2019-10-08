@@ -1,0 +1,4 @@
+name: MasterParticles
+version: ${project.version}
+main: com.github.aurateam.masterparticles.MasterParticles
+api-version: 1.13
