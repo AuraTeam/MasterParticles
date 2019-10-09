@@ -1,17 +1,19 @@
 package com.github.aurateam.masterparticles;
 
+import com.github.aurateam.masterparticles.commands.PlayCommand;
+import me.mattstudios.mf.base.CommandManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MasterParticles extends JavaPlugin {
 
+    private CommandManager commandManager;
+
     @Override
     public void onEnable() {
-        // Plugin startup logic
+
+        commandManager = new CommandManager(this);
+        commandManager.register(new PlayCommand());
 
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
 }
